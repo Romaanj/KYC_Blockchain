@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="facialKYC.css">
+    <script defer src="face-api.min.js"></script>
+    <script defer src="facialKYC.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div>
+            <div class="min-h-full bg-default flex relative max-h-screen">
+                <div id="desktop-main-content" class="flex flex-col min-h-screen w-full overflow-y-auto relative">
+                    <div class="md:hidden flex justify-between lg:justify-start 
+                    top-0 z-10 flex-shrink-0 h-16 sm:h-16 bg-surface-default">
+                    </div>
+                    <main class="flex-1 md:mx-4 my-4 lg:mx-8 lg:my-0 isolate">
+                        <div id="page-card" class="pb-10">
+                            <div class="bg-default px-4 pb-10 sm:px-10 sm:pt-8 sm:pb-12 lg:px-4">
+                                <div id="page-header" class="relative flex justify-between pb-4 md:pb-9 border-b md:border-b-0 dark:border-slate-700 -mx-4 px-4 items-center">
+                                    <div class="flex justify-start w-full md:w-max md:flex-col md:space-y-2 space-x-3 md:space-x-0 flex-1">
+                                        <div class="flex-w-full justify-between md:justify-start items-center md:space-x-4 whitespace-nowrap">
+                                            <h3 class="text-xl sm:text-2xl text-default font-bold">
+                                                KYC Verification Consulting Service
+                                            </h3>
+                                            <div class></div>
+                                        </div>
+                                    </div>
+                                    <!-- 헤더 우측 > 넣을 거 있음 넣을게 -->
+                                    <div id="global-page-actions"></div>
+                                </div>
+                                <div class="justify-center flex py-2 sm:py-3">
+                                    <div id="swap-element" class="!bg-inherit dark:md:!bg-portfolio-slateGray-500 md:!bg-white w-full rounded-2xl sm:max-w-md py-4 sm:px-3 md:px-8 sm:py-8">
+                                    <div id="webcam">
+                                        <video id="video" width="600" height="560" autoplay></video>
+                                    </div>
+                                       
+                                        
+                                    
+                                    
+                                    
+                                        <!-- 여기에 얼굴인증 넣으면 돼 -->
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async defer="defer" type="text/javascript"></script>
+</body>
+</html>
