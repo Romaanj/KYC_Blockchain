@@ -879,3 +879,11 @@ svg{
     font-size: .75rem;
     line-height: 1rem;
 }
+
+.mt-8{
+    text-align: left;
+}
+
+.textAlign{
+    text-align: left;
+}

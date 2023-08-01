@@ -887,3 +887,9 @@ svg{
     top: 480px;
     font-weight: bold;
 }
+
+.V-location{
+    position: absolute;
+    left: 430px;
+    top: 180px;
+}
