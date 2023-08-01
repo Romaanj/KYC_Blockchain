@@ -4,6 +4,13 @@ body {
     line-height: inherit;
     margin: 0;
 }
+
+#logo {
+    display: inline-block; /* 이미지를 인라인 블록으로 표시하여 가로로 정렬 */
+        width: 20px; /* 이미지의 가로 크기를 조정할 수 있습니다 */
+        height: 20px; /* 이미지의 세로 크기를 조정할 수 있습니다 *//* 이미지와 텍스트 사이의 간격을 조정할 수 있습니다 */
+}
+
 *, :after, :before {
     --tw-translate-x: 0;
     --tw-translate-y: 0;

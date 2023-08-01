@@ -43,6 +43,7 @@ function getLabeledFaceDescriptions() {
 );
 }
 
+let sameFace = false;
 video.addEventListener('play', async () => {
     const labeledFaceDescriptors = await getLabeledFaceDescriptions();
     const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors);
@@ -68,12 +69,41 @@ video.addEventListener('play', async () => {
         });
 
         results.forEach((result, i) => {
-            console.log(result.distance)
             const box = resizedDetections[i].detection.box;
             const drawBox = new faceapi.draw.DrawBox(box, 
-                { label: result});
-            drawBox.draw(canvas); 
-            console.log(result.toString());
-        });
+                { label: (1-result.distance).toFixed(2)});
+            drawBox.draw(canvas);
+            console.log(result.distance)
+            if ((1-result.distance) > 0.8 ) {
+                sameFace = true;
+            }
     }, 100);
+})
 });
+
+function checkConditionAndShowButton() {
+    console.log(sameFace)
+    const conditionalButtonContainer = document.getElementById("conditionalButtonContainer");
+
+    if (sameFace) {
+        // 버튼이 아직 생성되지 않았을 때만 버튼을 생성합니다.
+        if (!document.getElementById("conditionalButton")) {
+            const button = document.createElement("button");
+            button.id = "conditionalButton";
+            button.textContent = "Verification Success!!";
+            conditionalButtonContainer.appendChild(button);
+        }
+
+        // 조건이 충족되면 버튼을 보이도록 설정합니다.
+        document.getElementById("conditionalButton").style.display = "block";
+    } else {
+        // 조건이 충족되지 않으면 버튼을 숨깁니다.
+        const button = document.getElementById("conditionalButton");
+        if (button) {
+            button.style.display = "none";
+        }
+    }
+}
+
+const interval = 1000; // 1초마다 조건을 평가합니다.
+setInterval(checkConditionAndShowButton, interval);
