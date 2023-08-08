@@ -1,5 +1,9 @@
 const video = document.getElementById('video');
 
+const project = localStorage.getItem('selectedOption');
+const projectText = document.getElementById('selectedProject');
+projectText.innerHTML = projectText.innerHTML +"- "+ project;
+
 Promise.all([
     faceapi.nets.ssdMobilenetv1.loadFromUri('../models'),
     faceapi.nets.faceLandmark68Net.loadFromUri('../models'),
