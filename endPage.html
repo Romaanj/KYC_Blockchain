@@ -108,7 +108,10 @@
 </script>
     <script> function goToVenous() {
         window.location.href = "index.html";
-    }</script>
+    }
+    const project = document.getElementById('selectedProject');
+    project.innerHTML = project.innerHTML + "- " + localStorage.getItem("project");
+    </script>
     <script async defer="defer" type="text/javascript"></script>
 </body>
 </html>
