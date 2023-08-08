@@ -28,13 +28,3 @@ function displayAccountAddress(connectedAccount) {
 const connectButton = document.getElementById('metamaskAddress');
 connectButton.addEventListener('click', connectToMetaMask);
 
-function displaySelectedOption() {
-    localStorage.clear();
-    const selectedOption = document.getElementById('projectList');
-    const selectedOptionText = selectedOption.options[selectedOption.selectedIndex].value;
-    localStorage.setItem('selectedOption', selectedOptionText);
-}
-
-const projectList = document.getElementById('projectList');
-projectList.addEventListener('change', displaySelectedOption);
-
