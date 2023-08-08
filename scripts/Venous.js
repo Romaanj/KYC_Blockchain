@@ -1,5 +1,8 @@
 const video = document.getElementById('video');
 
+const project = document.getElementById('selectedProject');
+project.innerHTML = project.innerHTML + "- " + localStorage.getItem("project");
+
 function startWebcam() {
     navigator.mediaDevices.getUserMedia({ 
         video: true,
