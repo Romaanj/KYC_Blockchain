@@ -1,6 +1,6 @@
 const video = document.getElementById('video');
 
-const project = document.getElementById('selectedProject');
+const project = document.getElementById('selectedOption');
 project.innerHTML = project.innerHTML + "- " + localStorage.getItem("project");
 
 function startWebcam() {
