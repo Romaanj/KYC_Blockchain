@@ -1,8 +1,5 @@
 const video = document.getElementById('video');
 
-const project = document.getElementById('selectedProject');
-project.innerHTML = project.innerHTML + "- " + localStorage.getItem("project");
-
 Promise.all([
     faceapi.nets.ssdMobilenetv1.loadFromUri('../models'),
     faceapi.nets.faceLandmark68Net.loadFromUri('../models'),
@@ -83,29 +80,3 @@ video.addEventListener('play', async () => {
     }, 100);
 })
 });
-
-function checkConditionAndShowButton() {
-    const conditionalButtonContainer = document.getElementById("conditionalButtonContainer");
-
-    if (sameFace) {
-        // 버튼이 아직 생성되지 않았을 때만 버튼을 생성합니다.
-        if (!document.getElementById("conditionalButton")) {
-            const button = document.createElement("button");
-            button.id = "conditionalButton";
-            button.textContent = "Verification Success!!";
-            conditionalButtonContainer.appendChild(button);
-        }
-        
-        // 조건이 충족되면 버튼을 보이도록 설정합니다.
-        document.getElementById("conditionalButton").style.display = "block";
-    } else {
-        // 조건이 충족되지 않으면 버튼을 숨깁니다.
-        const button = document.getElementById("conditionalButton");
-        if (button) {
-            button.style.display = "none";
-        }
-    }
-}
-
-const interval = 1000; // 1초마다 조건을 평가합니다.
-setInterval(checkConditionAndShowButton, interval);
