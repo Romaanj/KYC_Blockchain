@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="metamask.css">
+    <script defer src="./scripts/face-api.min.js"></script>
+    <script defer src="./scripts/facialKYC.js"></script>
+    <title>Document</title>
+</head>
+<body dir>
+    <div class="modal">
+        <h1 class="title">얼굴 인식 등록</h1>
+        <form action="venous.html" method="get" class="box box_form" id="registration-form">
+            <input type="hidden" name="authenticity_token">
+            <p style="font-weight: bold;">사용자의 얼굴을 등록합니다.</p>
+            <p style="color: red;"><super>* 생체 정보는 사용자의 기기에 저장되니 걱정마십시오 *</super></p>
+            <input type="hidden" name="return_to_on_failure" id="return_to_on_failure">
+            <div id="secret" style="font-weight: bold; font-size:15px;">
+                얼굴 인식
+                <super>*</super>
+            </div>
+            <div id="webcam">
+                <video id="video" width="320" height="280" autoplay></video>
+            </div>
+        </div>
+        <div id="a" class="controls">
+            <input type="submit" name="commit" value="다음" disable_with_ignored="가입중&hellip;" class="button primary" data-disable-with="가입">
+            <a href="/index.html">취소</a>
+        </div>
+        </form>
+    </div>
+    <script src="mnemonic.js"></script>
+</body>
+</html>
