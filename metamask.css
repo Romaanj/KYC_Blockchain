@@ -20,6 +20,7 @@ canvas {
     border: black 1px solid;
     width : 320px;
     height : 280px;
+    z-index : 1;
 }
 * {
     font-weight: inherit;
