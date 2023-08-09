@@ -76,7 +76,7 @@ video.addEventListener('play', async () => {
             const drawBox = new faceapi.draw.DrawBox(box, 
                 { label: (1-result.distance).toFixed(2)});
             drawBox.draw(canvas);
-            console.log(result.distance)
+            console.log(result);
             if ((1-result.distance) > 0.8 ) {
                 sameFace = true;
             }
