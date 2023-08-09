@@ -37,3 +37,10 @@ function getProject() {
 
 const selectedOption = document.getElementById('projectList');
 selectedOption.addEventListener('change', getProject);
+
+function showInfo() {
+  const infos = document.getElementById('info');
+  infos.style.display = "block";
+}
+
+selectedOption.addEventListener('change', showInfo);
