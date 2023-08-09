@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="metamask.css">
+    <title>Document</title>
+</head>
+<body dir>
+    <div class="modal">
+        <h2 class="title">MetaMask에 가입</h2>
+        <form class="box box_form" id="registration-form">
+            <input type="hidden" name="authenticity_token">
+            <p>이 양식을 작성해 주시면 이메일 주소를 확인하고 로그인할 수 있도록 환영 이메일을 보내드립니다.</p>
+            <p>Required fields are marked by an asterisk (*)</p>
+            <input type="hidden" name="return_to_on_failure" id="return_to_on_failure">
+            <label for="user_name">
+                이름
+                <super>*</super>
+            </label>
+            <input required="required" autocomplete="name" aria-invalid="false" type="text" name="user[name]" id="user_name" >
+            <label for="user_email">
+                이메일
+                <super>*</super>
+            </label>
+            <input required="required" autocomplete="email" aria-invalid="false" type="text" name="user[email]" id="user_email" >
+            <div id="required-input-error-message" class="visually-hidden", aria-live="polite">
+                <!-- Missing the following required fields: -->
+            </div>
+            <input type="hidden" name="brand_id" id="brand_id" value="360001358331">
+            <div class="controls">
+                <input type="submit" name="commit" value="가입" disable_with_ignored="가입중&hellip;" class="button primary" data-disable-with="가입">
+                <a href="https://consensys.zendesk.com/auth/v2/login/signin?auth_origin=360001358331%2Ctrue%2Ctrue&brand_id=360001358331&return_to=https%3A%2F%2Fsupport.metamask.io%2Fhc%2Fko&theme=hc">취소</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
