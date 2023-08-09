@@ -14,6 +14,13 @@ body {
 html, body {
     min-height: 100%;
 }
+canvas {
+    text-align: center;
+    position: absolute;
+    border: black 1px solid;
+    width : 320px;
+    height : 280px;
+}
 * {
     font-weight: inherit;
 }
