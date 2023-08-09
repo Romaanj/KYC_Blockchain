@@ -74,10 +74,10 @@ video.addEventListener('play', async () => {
         results.forEach((result, i) => {
             const box = resizedDetections[i].detection.box;
             const drawBox = new faceapi.draw.DrawBox(box, 
-                { label: result.label});
+                { label: (1-result.distance).toFixed(2)});
             drawBox.draw(canvas);
             console.log(result);
-            if ((1-result.distance) > 0.8 ) {
+            if ((1-result.distance) > 0.7 ) {
                 sameFace = true;
             }
     }, 100);
@@ -95,7 +95,7 @@ function checkConditionAndShowButton() {
             button.textContent = "Verification Success!!";
             conditionalButtonContainer.appendChild(button);
         }
-
+        
         // 조건이 충족되면 버튼을 보이도록 설정합니다.
         document.getElementById("conditionalButton").style.display = "block";
     } else {
